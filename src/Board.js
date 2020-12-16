@@ -38,14 +38,10 @@ function Board() {
     if (newSquares[index] !== null || winner !== null) {
       return;
     }
-
     newSquares[index] = xIsNext ? "X" : "0";
     setSquares(newSquares);
     setXIsNext(!xIsNext);
-
   }
-
-
 
   const winner = calculateWinner(squares);
   let status;
@@ -67,7 +63,7 @@ function Board() {
     return (
       <Square
         key={index}
-        va={value}
+        value={value}
         onClick={() => {
           onSquareClick(index);
         }}
